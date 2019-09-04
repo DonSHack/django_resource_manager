@@ -8,7 +8,7 @@
         {% for company in companies %}
         <div class="col-md-4">
             <article class="media content-section">
-              <img class="rounded-circle article-img" src="{{ company.logo.url }}">
+              <img class="rounded-circle article-img" width="100" height="100" src="{{ company.logo.url }}">
               <div class="media-body">
                 <h2><a class="article-title" href="{% url 'company-detail' company.id %}">{{ company.name }}</a></h2>
                 <p class="article-content">{{ company.email }}</p>
