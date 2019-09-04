@@ -30,19 +30,35 @@ Step4:
 install  all the requirements
 
     pip install -r requirements.txt
-Step5:
+ Step5:
+Change the database settings in settings.py file in project directiory
+Ex:
+
+    DATABASES = {    
+	    'default': {	    
+	    'ENGINE': 'django.db.backends.mysql',	    
+	    'NAME': 'resource_manager',	    
+	    'USER': 'root',	    
+	    'PASSWORD': 'root',	    
+	    'HOST': '127.0.0.1',	    
+	    'PORT': '3306',
+	    
+	    }    
+    }
+
+Step6:
 Migrate the database
 
     python manage.py migrate
 
-Step6:
+Step7:
 Navigate to the project directory and create superuser using **Django** command
 
     python manage.py createthesuperuser
 
 (Enter the username email and password appropriately)
 
-Step7:
+Step8:
 Run the development server and then goto http://localhost:8000
 
     python manage.py runserver
